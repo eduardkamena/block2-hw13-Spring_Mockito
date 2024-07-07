@@ -1,6 +1,6 @@
 package pro.sky.spring_mockito.services;
 
-import pro.sky.spring_mockito.records.Employee;
+import pro.sky.spring_mockito.data.Employee;
 
 import java.util.List;
 import java.util.Map;

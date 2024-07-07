@@ -2,7 +2,7 @@ package pro.sky.spring_mockito.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import pro.sky.spring_mockito.services.DepartmentService;
-import pro.sky.spring_mockito.records.Employee;
+import pro.sky.spring_mockito.data.Employee;
 
 import java.util.List;
 import java.util.Map;

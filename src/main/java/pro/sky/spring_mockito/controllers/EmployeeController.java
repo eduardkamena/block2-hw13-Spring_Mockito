@@ -5,7 +5,7 @@ import pro.sky.spring_mockito.exceptions.EmployeeAlreadyAddedException;
 import pro.sky.spring_mockito.exceptions.EmployeeNotFoundException;
 import pro.sky.spring_mockito.exceptions.EmployeeStorageIsFullException;
 import pro.sky.spring_mockito.services.EmployeeService;
-import pro.sky.spring_mockito.records.Employee;
+import pro.sky.spring_mockito.data.Employee;
 
 import java.util.Map;
 
@@ -31,31 +31,27 @@ public class EmployeeController {
     // Удаление сотрудника
     @GetMapping(path = "/remove")
     public void removeEmployee(@RequestParam("firstName") String firstName,
-                               @RequestParam("lastName") String lastName,
-                               @RequestParam("department") int department,
-                               @RequestParam("salary") double salary) {
-        employeeService.removeEmployee(firstName, lastName, department, salary);
+                               @RequestParam("lastName") String lastName) {
+        employeeService.removeEmployee(firstName, lastName);
     }
 
     // Поиск сотрудника
     @GetMapping(path = "/find")
     public Employee findEmployee(@RequestParam("firstName") String firstName,
-                                 @RequestParam("lastName") String lastName,
-                                 @RequestParam("department") int department,
-                                 @RequestParam("salary") double salary) {
-        return employeeService.findEmployee(firstName, lastName, department, salary);
+                                 @RequestParam("lastName") String lastName) {
+        return employeeService.findEmployee(firstName, lastName);
     }
 
     // Вывод всех сотрудников в формате JSON
     @GetMapping(path = "/print")
-    public Map<String, Employee> printEmployee() {
-        return employeeService.printEmployee();
+    public Map<String, Employee> getAllEmployee() {
+        return employeeService.getAllEmployee();
     }
 
     // Вывод размера коллекции
     @GetMapping(path = "/size")
-    public int printSize() {
-        return employeeService.printSize();
+    public int getSize() {
+        return employeeService.getSize();
     }
 
     // Отлов ошибки

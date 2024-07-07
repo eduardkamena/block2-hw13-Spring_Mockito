@@ -1,6 +1,6 @@
 package pro.sky.spring_mockito.services;
 
-import pro.sky.spring_mockito.records.Employee;
+import pro.sky.spring_mockito.data.Employee;
 
 import java.util.Map;
 
@@ -10,18 +10,20 @@ public interface EmployeeService {
     void checkEmployee(String firstName, String lastName);
 
     // Метод записи нового сотрудника
-    void addEmployee(String firstName, String lastName, int department, double salary);
+    Employee addEmployee(String firstName, String lastName, int department, double salary);
 
     // Метод удаления сотрудника
-    void removeEmployee(String firstName, String lastName, int department, double salary);
+    Employee removeEmployee(String firstName, String lastName);
 
     // Метод для поиска сотрудника
-    Employee findEmployee(String firstName, String lastName, int department, double salary);
+    Employee findEmployee(String firstName, String lastName);
 
     // Метод вывода всех сотрудников в формате JSON
-    Map<String, Employee> printEmployee();
+    Map<String, Employee> getAllEmployee();
 
     // Метод вывода размера коллекции
-    int printSize();
+    int getSize();
 
+    // Метод для поиска по ключу сотрудника в мапе
+    String getEmployeeKey(String firstName, String lastName);
 }
