@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pro.sky</groupId>
-	<artifactId>block2-hw13-Spring_Mockito</artifactId>
+	<artifactId>block2-hw13-spring_mockito</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>block2-hw13-Spring_Mockito</name>
-	<description>HW13 Spring_Mockito</description>
+	<name>block2-hw13-spring_mockito</name>
+	<description>HW13 spring_mockito</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,6 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,7 +42,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>
